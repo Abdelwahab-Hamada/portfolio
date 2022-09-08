@@ -9,7 +9,7 @@ function App() {
     <div className=' font-mono flex flex-col h-screen mx-1 '>
       <div className='flex-1 flex justify-center overflow-hidden'>
       <div className=' absolute left-5 top-1 rounded backdrop-blur-xl z-50'>
-            <img className="w-16" src="https://res.cloudinary.com/abdelwahab-youssef/image/upload/v1662576639/cooltext418770280741237_eohvzy.png"/>
+            <img className="w-16" src="https://res.cloudinary.com/abdelwahab-youssef/image/upload/v1662662719/favicon.ico_lrbzfr.png"/>
       </div>
       <Header/>
         <div className='relative overflow-auto flex gap-12  py-16 scrollbar justify-center p-3 w-full rounded '>
