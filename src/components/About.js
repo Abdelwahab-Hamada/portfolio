@@ -4,7 +4,7 @@ import Refs from './Refs'
 const About = () => {
   return (
     <div id='about' className='mt-5'>
-        <h1 className="border font-semibold w-fit px-1 rounded text-3xl mt-1">About</h1>
+        <h1 className="border font-semibold w-fit px-1 rounded text-3xl mt-1 border-r-4 border-b-4 border-black">About</h1>
         <p className='text-xl font-semibold p-3'>i'm detail oriented and flexable developer who can help bring your ideas to life.</p>
         <div className='p-3'>
           <div className='mb-5'>
@@ -16,7 +16,7 @@ const About = () => {
               </div>
               <div className='text-xl font-semibold w-52'>
                 <h1>Passionate </h1>
-                <p className='text-base font-light'>i do love my job so i'm putting all of my efforts to hit the ground to achive goals.</p>  
+                <p className='text-base font-light'>i do love my job so i'm putting all of my efforts to hit the ground bring treasuer out.</p>  
 
               </div>
               <div className='text-xl font-semibold w-52'>
@@ -47,15 +47,23 @@ const About = () => {
           <p className='text-xl font-semibold mb-5 '>i've a good command of programming fundmentals:</p>
           
         </div>
-        <Refs/>
 
-        <ol className='ml-5 list-disc flex flex-wrap gap-12 justify-center'>
+        <ol className='ml-5 list-decimal flex flex-wrap gap-12 justify-center'>
             <li className='text-xl font-semibold w-52'>Data Structures and algorithems</li>
             <li className='text-xl font-semibold w-52'>Object Oriented Programming</li>
             <li className='text-xl font-semibold w-52'>Design patterns</li>
-            <li className='text-xl font-semibold w-52'>SOLID Principle</li>
-            <li className='text-xl font-semibold w-52'>DRY Principle</li>
+            
+            <li className='text-xl font-semibold w-52 whitespace-nowrap'>
+            Clean code Principles:
+              <ol className='flex flex-wrap gap-5 list-disc'>
+                <li className='text-xl font-semibold mx-auto'>SOLID </li>
+                <li className='text-xl font-semibold mx-auto'>DRY </li>
+              </ol>
+            </li>
+            
         </ol>
+        <Refs/>
+
         </div>
     </div>
   )

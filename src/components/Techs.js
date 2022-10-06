@@ -5,7 +5,7 @@ import { Popover } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 
 const Techs = () => {
-    const {loading,data,error,refetch,}=useQuery(techsQuery,)
+    const {loading,data}=useQuery(techsQuery,)
 
     let spinner = (
         <svg role="status" className="inline mr-3 w-4 h-4 text-black animate-spin" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -17,23 +17,32 @@ const Techs = () => {
     if (loading) return spinner
 
   return (
-    <Popover>
-      <Popover.Button id='techs' className=' outline-none mt-5 bg-gray-500 p-1.5 rounded text-white'>
-        Technoligies
-        <ChevronDownIcon className='w-5 inline-block'/>
-      </Popover.Button>
-      <Popover.Panel>
-      <div className=' h-full overflow-auto scrollbar mt-5 '>
-          <div className=' flex items-baseline gap-5 p-5 justify-around'> 
-              {data.techs.map((tech)=>(
-                  <div key={tech.id} className=" w-24">
-                      <img className='peer ...' src={tech.logo}/>
-                      <h1 className='absolute peer-hover:block hidden whitespace-nowrap'>{tech.name}</h1>
+    <Popover className='ml-2'>
+      {({open})=>(
+        <>
+          <Popover.Button id='techs' className='group outline-none mt-5 bg-black p-1.5 rounded text-white'>
+            Technoligies
+            <ChevronDownIcon className={`w-5 inline-block rotate-90 duration-200 group-hover:rotate-0 ${open && 'rotate-0'}`}/>
+          </Popover.Button>
+          
+            <Popover.Panel>
+              <div className=' h-full overflow-auto scrollbar mt-5 '>
+                  <div className=' flex flex-wrap items-baseline gap-5 p-5 justify-around'> 
+                      {data.techs.map((tech)=>(
+                          <div key={tech.id} className=" w-24">
+                              <img className='peer ...' src={tech.logo} alt={tech.name}/>
+                              <h1 className='absolute peer-hover:block hidden whitespace-nowrap'>{tech.name}</h1>
+                          </div>
+                      ))}
                   </div>
-              ))}
-          </div>
-        </div>
-      </Popover.Panel>
+                </div>
+            </Popover.Panel>
+          
+        </>
+      )}
+      
+      
+      
     </Popover>
     
   )

@@ -29,10 +29,10 @@ const Contact = () => {
         notify(<p className='text-green-600 inline-block'>Sent</p>)
     }
   return (
-    <div id="contact" className="mt-5">
-        <h1  className="border font-semibold w-fit px-1 rounded text-3xl mt-1">Contact</h1>
-        <form onSubmit={handleContact} className='my-7 px-3'>
-            <div className='w-full flex flex-col-reverse relative'>
+    <div id="contact" className="">
+        <h1  className="border font-semibold w-fit px-1 rounded text-3xl  border-r-4 border-b-4 border-black">Contact</h1>
+        <form onSubmit={handleContact} className='my-7 px-3 lg:w-1/2 md:w-3/4'>
+            <div className='w-3/4 flex flex-col-reverse relative'>
                 <input
                     type="email"
                     id="email"
@@ -55,7 +55,7 @@ const Contact = () => {
                 peer-placeholder-shown:border-none
                 peer-placeholder-shown:bg-transparent
                 '
-                >email</label>
+                >Email</label>
             </div>
 
             <div className='w-full flex flex-col-reverse relative mt-7'>
@@ -84,12 +84,13 @@ const Contact = () => {
                 >Message</label>
             </div>
             <button 
-            className='mt-2 border-2 w-fit rounded px-2 hover:bg-black/5 bg-black/10 inline-block mr-2'>
+            className='mt-5 w-fit hover:bg-black/5 bg-black/10 inline-block mr-2 hover:bg-white hover:border-black hover:text-black duration-300 border-2 border-transparent bg-black text-white px-1.5 rounded-full'>
             
             Send</button>
             {spinner}
             {notification}
         </form>
+        
     </div>
   )
 }
