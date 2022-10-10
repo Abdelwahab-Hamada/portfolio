@@ -7,7 +7,7 @@ const Nav = () => {
     <div className='px-1 flex gap-5 items-center scale-90'>
         <a className='hover:bg-white hover:border-black hover:text-black duration-300 border-2 border-transparent bg-black text-white px-1.5 rounded-full ' href='#contact'>Contact</a>
         
-        <a  href='https://res.cloudinary.com/abdelwahab-youssef/image/upload/v1665039300/Abdelwahab-youssef_cv_swiwzj.pdf'
+        <a  href='https://res.cloudinary.com/abdelwahab-youssef/image/upload/v1665408798/Abdelwahab_youssef___cv_xfr7xj.pdf'
         download
          className="flex hover:bg-white hover:border-black hover:text-black duration-300 border-2 border-transparent bg-black text-white px-1.5 rounded-full">CV<DownloadIcon className='w-5'/></a>
 
