@@ -16,7 +16,7 @@ function App() {
         <div className='relative overflow-overlay flex gap-12  py-16 scrollbar justify-center p-3 w-full rounded '>
           
           <Routes>
-              <Route path="portfolio-app/" element={<Outlet />}>
+              <Route path="portfolio/" element={<Outlet />}>
                 <Route path="" element={<Landing />} />
               </Route>
           </Routes>
