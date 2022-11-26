@@ -26,7 +26,12 @@ const Contact = () => {
             message:msg
           }})
 
-        notify(<p className='text-green-600 inline-block'>Sent</p>)
+        notify(
+            <>
+                <p className='text-green-600 inline-block'>Sent</p>
+                <p className='text-red-600 mt-1 font-semibold'>*Please check your email for more details</p>
+            </>
+            )
     }
   return (
     <div id="contact" className="">

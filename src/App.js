@@ -13,7 +13,7 @@ function App() {
             alt="logo" className="w-8 md:w-10" src={process.env.PUBLIC_URL+"/logo192.png"}/>
       </div>
       <Header/>
-        <div className='relative overflow-overlay flex gap-12  py-16 scrollbar justify-center p-3 w-full rounded '>
+        <div className='relative overflow-overlay flex gap-12  py-24 scrollbar justify-center p-0 w-full  rounded md:p-32 lg:p-32'>
           
           <Routes>
               <Route path="portfolio/" element={<Outlet />}>

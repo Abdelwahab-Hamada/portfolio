@@ -1,8 +1,7 @@
 import React from 'react'
 import { useQuery, } from '@apollo/client'
 import techsQuery from '../gql/listTechs'
-import { Popover } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/solid'
+
 
 const Techs = () => {
     const {loading,data}=useQuery(techsQuery,)
@@ -17,33 +16,17 @@ const Techs = () => {
     if (loading) return spinner
 
   return (
-    <Popover className='ml-2'>
-      {({open})=>(
-        <>
-          <Popover.Button id='techs' className='group outline-none mt-5 bg-black p-1.5 rounded text-white'>
-            Technoligies
-            <ChevronDownIcon className={`w-5 inline-block rotate-90 duration-200 group-hover:rotate-0 ${open && 'rotate-0'}`}/>
-          </Popover.Button>
-          
-            <Popover.Panel>
-              <div className=' h-full overflow-auto scrollbar mt-5 '>
-                  <div className=' flex flex-wrap items-baseline gap-5 p-5 justify-around'> 
-                      {data.techs.map((tech)=>(
-                          <div key={tech.id} className=" w-24">
-                              <img className='peer ...' src={tech.logo} alt={tech.name}/>
-                              <h1 className='absolute peer-hover:block hidden whitespace-nowrap'>{tech.name}</h1>
-                          </div>
-                      ))}
-                  </div>
-                </div>
-            </Popover.Panel>
-          
-        </>
-      )}
-      
-      
-      
-    </Popover>
+    <div className=' h-full mt-10'>
+      <p className=' text-center mb-5 text-xl font-black'>I have experience with:</p>
+      <div className=' flex flex-wrap items-baseline gap-10 p-5 justify-around'> 
+          {data.techs.map((tech)=>(
+              <div key={tech.id} className=" w-28">
+                  <img className='peer ...' loading='lazy' placeholder={tech.name} src={tech.logo} alt={tech.name}/>
+                  <h1 className=' absolute peer-hover:block hidden whitespace-nowrap'>{tech.name}</h1>
+              </div>
+          ))}
+      </div>
+    </div>
     
   )
 }

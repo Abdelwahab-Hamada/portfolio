@@ -33,7 +33,7 @@ const Refs = () => {
             <div className=' flex flex-wrap items-baseline gap-5 '> 
                 {data.refs.map((ref)=>(
                     <div key={ref.id} className=" w-24">
-                        <img src={ref.img} alt={ref.name}/>
+                        <img loading='lazy' placeholder={ref.name} src={ref.img} alt={ref.name}/>
                     </div>
                 ))}
             </div>
