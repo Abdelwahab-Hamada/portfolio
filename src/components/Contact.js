@@ -94,7 +94,7 @@ const Contact = () => {
                 >Message</label>
             </div>
             <button 
-            className='mt-5 w-fit font-black hover:bg-black/5 bg-black/10 inline-block mr-2 hover:bg-white hover:border-black hover:text-black duration-300 border-2 border-transparent bg-black text-white px-1.5 rounded-full'>
+            className='mt-5 w-fit font-black hover:bg-black/5 inline-block mr-2 hover:bg-white hover:border-black hover:text-black duration-300 border-2 border-transparent bg-black text-white px-1.5 rounded-full'>
             
             Send</button>
             {spinner}
