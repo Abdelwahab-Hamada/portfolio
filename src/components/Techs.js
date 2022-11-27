@@ -16,7 +16,7 @@ const Techs = () => {
     if (loading) return spinner
 
   return (
-    <div className=' h-full mt-10'>
+    <div className=' h-full mt-10 lg:w-4/6 '>
       <p className=' text-center mb-5 text-xl font-black'>I have experience with:</p>
       <div className=' flex flex-wrap items-baseline gap-10 p-5 justify-around'> 
           {data.techs.map((tech)=>(

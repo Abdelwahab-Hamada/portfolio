@@ -36,8 +36,8 @@ const Contact = () => {
   return (
     <div id="contact" className="">
         <h1  className="border font-semibold w-fit px-1 rounded text-3xl  border-r-4 border-b-4 border-black">Contact</h1>
-        <form onSubmit={handleContact} className='my-7 px-3 lg:w-1/2 md:w-3/4'>
-            <div className='w-3/4 flex flex-col-reverse relative'>
+        <form onSubmit={handleContact} className='my-7 px-3 lg:w-1/2 md:w-5/6'>
+            <div className='w-5/6 flex flex-col-reverse relative'>
                 <input
                     type="email"
                     id="email"
@@ -53,43 +53,48 @@ const Contact = () => {
                 htmlFor="email"
                 className='
                 rounded px-1 text-xs font-mono ml-0 absolute 
-                peer-placeholder-shown:top-1.5 -top-3/4
-            text-white bg-gray-500 duration-300 ease-in-out 
+                peer-placeholder-shown:top-1.5 -top-3.5 left-2
+            text-white bg-black font-black duration-300 ease-in-out 
                 peer-placeholder-shown:text-base
-            peer-placeholder-shown:text-gray-400
+                peer-placeholder-shown:-left-1
+                peer-placeholder-shown:font-extralight
+            peer-placeholder-shown:text-gray-300
                 peer-placeholder-shown:border-none
                 peer-placeholder-shown:bg-transparent
                 '
-                >Email</label>
+                >E-Mail</label>
             </div>
 
-            <div className='w-full flex flex-col-reverse relative mt-7'>
-                <input
+            <div className='w-full flex flex-col-reverse relative mt-5'>
+                <textarea
                     type="text"
                     id="msg"
+                    rows='4'
                     autoComplete="off"
                     onChange={(e) => setMsg(e.target.value)}
                     value={msg}
                     required
-                    className="font-mono pt-0.5 peer ... border-b-2 
-                    focus:outline-none w-full "
+                    className="font-mono pt-0.5 peer ... border-2 
+                    focus:outline-none w-full rounded"
                     placeholder=' '
                 />
                 <label 
                 htmlFor="msg"
                 className='
                 rounded px-1 text-xs font-mono ml-0 absolute 
-                peer-placeholder-shown:top-1.5 -top-3/4
-            text-white bg-gray-500 duration-300 ease-in-out 
+                peer-placeholder-shown:top-2 -top-2.5 left-2
+            text-white bg-black font-black duration-300 ease-in-out 
                 peer-placeholder-shown:text-base
-            peer-placeholder-shown:text-gray-400
+                peer-placeholder-shown:left-0
+                peer-placeholder-shown:font-extralight
+            peer-placeholder-shown:text-gray-300
                 peer-placeholder-shown:border-none
                 peer-placeholder-shown:bg-transparent
                 '
                 >Message</label>
             </div>
             <button 
-            className='mt-5 w-fit hover:bg-black/5 bg-black/10 inline-block mr-2 hover:bg-white hover:border-black hover:text-black duration-300 border-2 border-transparent bg-black text-white px-1.5 rounded-full'>
+            className='mt-5 w-fit font-black hover:bg-black/5 bg-black/10 inline-block mr-2 hover:bg-white hover:border-black hover:text-black duration-300 border-2 border-transparent bg-black text-white px-1.5 rounded-full'>
             
             Send</button>
             {spinner}

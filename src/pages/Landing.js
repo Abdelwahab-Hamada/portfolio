@@ -7,8 +7,7 @@ import Techs from "../components/Techs"
 
 const Landing = () => {
   return (
-    <div className='relative flex flex-col'>
-        
+    <div className='relative flex flex-col overflowx-hidden'>
         <Hero/>
         <Techs/>
         <Services/>

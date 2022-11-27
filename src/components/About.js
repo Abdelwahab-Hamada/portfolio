@@ -3,12 +3,12 @@ import Refs from './Refs'
 
 const About = () => {
   return (
-    <div id='about' className='mt-5'>
+    <div id='about' className='mt-5 '>
         <h1 className="border font-semibold w-fit px-1 rounded text-3xl mt-1 border-r-4 border-b-4 border-black">About</h1>
-        <p className='text-xl font-semibold p-5'>I'm detail oriented and flexable developer who can help bring your ideas to life.</p>
+        <p className='text-xl font-semibold p-3'>I'm detail oriented and flexable developer who can help bring your ideas to life.</p>
         <div className='p-3'>
           <div className='mb-5'>
-            <div className='flex justify-center flex-wrap gap-12 '>
+            <div className='flex justify-center flex-wrap gap-12 lg:w-3/4'>
               <div className='text-xl font-semibold w-52'>
                 <h1>Adaptive </h1>
                 <p className='text-base font-light'>having an ability to change to suit changing conditions so i'll fit in any position that job requires.</p>  
@@ -44,11 +44,11 @@ const About = () => {
         </div>
 
         <div className='flex items-baseline'>
-          <p className='text-xl font-semibold mb-5 '>i've a good command of programming fundmentals:</p>
+          <p className='text-xl font-semibold mb-5 '>I've a good command of programming fundmentals:</p>
           
         </div>
 
-        <ol className='ml-5 list-decimal flex flex-wrap gap-12 justify-center'>
+        <ol className='ml-10 list-decimal flex flex-wrap gap-12 justify-center lg:w-3/4'>
             <li className='text-xl font-semibold w-52'>Data Structures and algorithems</li>
             <li className='text-xl font-semibold w-52'>Object Oriented Programming</li>
             <li className='text-xl font-semibold w-52'>Design patterns</li>
