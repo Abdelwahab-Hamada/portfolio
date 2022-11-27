@@ -26,7 +26,9 @@ const Nav = () => {
           {
             loading 
             ? spinner
-            : <DownloadIcon className='w-5'/>
+            : <a  href={data?.cv} target='_blank' rel="noreferrer"
+              download
+              className=""><DownloadIcon className='w-5'/></a>
           }
         </div>
 
