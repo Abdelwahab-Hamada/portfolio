@@ -19,7 +19,7 @@ const Techs = () => {
     <div className=' h-full mt-10 lg:w-4/6 '>
       <p className=' text-center mb-5 text-xl font-black'>I have experience with:</p>
       <div className=' flex flex-wrap items-baseline gap-10 p-5 justify-around'> 
-          {data.techs.map((tech)=>(
+          {data?.techs.map((tech)=>(
               <div key={tech.id} className=" w-28">
                   <img className='peer ...' loading='lazy' placeholder={tech.name} src={tech.logo} alt={tech.name}/>
                   <h1 className=' absolute peer-hover:block hidden whitespace-nowrap'>{tech.name}</h1>

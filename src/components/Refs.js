@@ -31,7 +31,7 @@ const Refs = () => {
         <Popover.Panel>
         <div className=' h-full overflow-auto scrollbar mt-5 p-5'>
             <div className=' flex flex-wrap items-baseline gap-5 '> 
-                {data.refs.map((ref)=>(
+                {data?.refs.map((ref)=>(
                     <div key={ref.id} className=" w-24">
                         <img loading='lazy' placeholder={ref.name} src={ref.img} alt={ref.name}/>
                     </div>
